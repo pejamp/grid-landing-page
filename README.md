@@ -4,8 +4,8 @@ This is a solution to the [Typemaster pre-launch landing page challenge on Front
 
 ## Screenshot
 
-![Preview](./src/preview/mobile-preview.png)
-![Preview](./src/preview/tablet-preview.png)
+<img width="375px" src="./src/preview/mobile-preview.png">
+<img width="768px" src="./src/preview/tablet-preview.png">
 
 ## Usage
 
