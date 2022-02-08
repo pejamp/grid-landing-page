@@ -9,6 +9,7 @@ export const GridLayout = styled.div`
 	grid-template-columns: 30% 70%;
 
 	&.itemBox {
+		grid-column: 1 / span 2;
 		padding: 1.5rem;
 		grid-template-columns: auto;
 		row-gap: 1.5rem;
@@ -20,13 +21,13 @@ export const GridLayout = styled.div`
 		padding: 0 2rem;
 
 		&.col-2 {
-			padding: 0;
 			grid-template-columns: 1fr 1fr;
 			padding: 2rem;
-			gap: 4rem;
+			row-gap: 4rem;
 			
 			.itemBox {
 				padding: 0;
+				padding-right: 4rem;
 				gap: 0;
 				row-gap: 1.5rem;	
 				grid-template-columns: 1fr;
@@ -45,7 +46,31 @@ export const GridLayout = styled.div`
 				}
 			}
 		}
+	}
 
+	@media screen and (min-width: 1440px) {
+		&.col-2 {
+			grid-template-columns: auto;
+			padding: 4rem 9rem;
+			column-gap: 2rem;
+			
+			.itemBox {
+				padding-right: 0rem;
+
+				&.column-1 {
+					grid-column: 1;
+				}
+				&.column-2 {
+					grid-column: 2;
+				}
+				&.column-3 {
+					grid-column: 3;
+				}
+				&.column-4 {
+					grid-column: 4;
+				}
+			}
+		}
 	}
 `;
 
@@ -69,6 +94,12 @@ export const Header = styled.header`
   	padding-top: 2rem;
 		padding-bottom: 64px;
 		grid-template-columns: 1fr auto;
+	}
+
+	@media screen and (min-width: 1440px) {
+		padding: 0 9rem;
+  	padding-top: 3rem;
+		padding-bottom: 64px;
 	}
 `;
 
@@ -109,6 +140,14 @@ export const SectionDefault = styled.section`
 			column-gap: 8px;
 		}
 	}
+
+	@media screen and (min-width: 1440px) {
+		padding-left: 9rem;
+
+		&.highlight {
+			width: 40vw;
+		}
+	}
 `;
 
 export const Title = styled.h1`
@@ -136,7 +175,7 @@ export const Title = styled.h1`
 		@media screen and (min-width: 768px) {
 			text-align: start;
 			font-size: 24px;
-			padding-right: 4rem;
+			padding-right: 5rem;
 		}
 	}
 `;
@@ -234,6 +273,11 @@ export const Image = styled.div<ImageProps>`
 		height: 400px;
 		background-size: auto 130%;
 		background-position: 20% 75%;
+	}
+
+	@media screen and (min-width: 1440px) {
+		right: 0rem;
+		width: 80%;
 	}
 `;
 
