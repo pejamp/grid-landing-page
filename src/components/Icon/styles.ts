@@ -15,4 +15,8 @@ export const IconStyled = styled.div`
     font-size: 2rem;
     place-self: center;
   }
+
+  @media screen and (min-width: 768px) {
+    place-self: flex-start;
+  }
 `;

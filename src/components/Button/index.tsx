@@ -1,12 +1,20 @@
-import { Button } from "./styles";
+import { Wrapper } from "./styles";
 
 interface ButtonProps {
   text?: string;
-  hightlightButton?: boolean; 
+  backgroundModifier?: string; 
+  colorModifier?: string;
 }
 
-export function ButtonDefault(props: ButtonProps) {
+export function Button({ text, backgroundModifier, colorModifier }: ButtonProps) {
   return (
-    <Button highlight={props.hightlightButton}>{props.text}</Button>
+    <Wrapper 
+      style={{ 
+        background: backgroundModifier,
+        color: colorModifier
+      }}
+    >
+      {text}
+    </Wrapper>
   );
 }

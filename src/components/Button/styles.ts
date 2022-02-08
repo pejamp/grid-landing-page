@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
-interface ButtonProps {
-  highlight?: boolean;
-}
-
-export const Button = styled.button<ButtonProps>`
-  background: ${props => props.highlight ? `var(--highlight-color)` : `var(--button-default)`};  
-  color: ${props => props.highlight ? `var(--white)` : `var(--text-title)`};
+export const Wrapper = styled.button`
+  background: var(--button-default);  
+  color: var(--text-title);
   text-transform: uppercase;
   font-weight: 600;
   border-radius: 8px;
-  height: 48px;  
+  height: 48px;
+  
+  @media screen and (min-width: 768px) {
+    padding: 0 1.5rem;
+    height: 56px;
+  }
 `;
